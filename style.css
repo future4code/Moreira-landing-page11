@@ -1,0 +1,587 @@
+/*configuração básica do arquivo html para excluir as bordas*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*configuração básica do header */
+header{
+    display: flex;
+    background-color: #132235;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*dimensionamento do logotipo no header*/
+#logo{
+    width: 210px;
+}
+
+/*container com todos os botões do header configurado para distribuir corretamente os elementos*/
+.buttons-header{
+    display: flex;
+    width: 700px;
+    justify-content: space-around;
+}
+
+/*estilização do botão de anúncio*/
+#anuncie-button{
+    font-size: 15px;
+    width: 200px;
+    border-radius: 100px 25px;
+    padding: 15px;
+    border: 0;
+    background-color: #6DDAD3;
+    color: #132235;
+    transition: all 0.5s ease;
+}
+
+#anuncie-button:hover{
+    background-color: rgba(235, 232, 232, 0.918);
+    border-radius: 25px 100px;
+}
+
+
+
+/*display flex do container com os botões de cadastro e login para que o "separador" apareça*/
+#container-reg-log{
+    display: flex;
+}
+
+/*dimensionamento dos botões de cadastro e login*/
+.reg-log-button{
+    font-size: 15px;
+}
+
+
+/*configuração do botão de cadastro para criar o separador*/
+#reg-button{
+    border-top: 0;
+    border-right: 1pt solid rgba(235, 232, 232, 0.918);
+    border-bottom: 0;
+    border-left: 0;
+    border-bottom-left-radius: 25px;
+    background-color: #132235;
+    color: whitesmoke;
+    padding-right: 0px;
+    text-justify: center;
+    width: 230px;
+    transition: all 0.5s ease;
+}
+
+/*estilização do hover do botão de cadastro*/
+#reg-button:hover{
+    background-color: rgba(235, 232, 232, 0.918) ;
+    color: #132235;
+}
+
+/*configuração do botão de login para criar o separador*/
+#log-button{
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 1pt solid rgba(235, 232, 232, 0.918);
+    border-top-right-radius: 25px;
+    background-color: #132235;
+    color: whitesmoke;
+    width: 150px;
+    transition: all 0.5s ease;
+}
+
+/*estilização do hover do botão de login*/
+#log-button:hover{
+    background-color: rgba(235, 232, 232, 0.918) ;
+    color: #132235;
+}
+
+/*configuração básica da div main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+h1{
+    margin-top: 10vh;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/*configuração do container da seção 1*/
+.section-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+   
+}
+
+/*configuração da seção 1*/
+#section-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+    justify-items: center;
+}
+
+/*estilização dos menus flutuantes*/
+.menu-flutuante{
+    font-size: 30px;
+    width: 300px;
+    text-align-last: center;
+    border: 0;
+    transition: all 0.2s ease;
+    height: 50px;
+}
+
+/* estilização do hover do botão do menu flutuante*/
+.menu-flutuante:hover{
+    background-color: #6DDAD3;
+    border-radius: 10px;
+}
+
+/*estilização do botão de busca*/
+#buscar-button{
+    font-size: 15px;
+    width: 300px;
+    border-radius: 100px 25px;
+    padding: 15px;
+    border: 0;
+    background-color: #6DDAD3;
+    color: #132235;
+    transition: all 0.5s ease;
+    margin-top: 20px;
+}
+
+
+#buscar-button:hover{
+    background-color: #132235;
+    color: whitesmoke;
+    border-radius: 25px 100px;
+}
+
+
+/* INICIO CODIGO LEO */
+
+/* seçao de buscas populares */
+/* secao republicas */
+#separador {
+    max-height: 100px;
+    max-width: 90vw;
+    margin-top: 8vh;
+    margin-bottom: -1px;
+}
+
+#chamada-republica{
+    background-color: #6C8C8A;
+    width: 99vw;
+    color: white;
+    padding: 20px 0;
+}
+
+#chamada-republica h3{
+    color:#132235;
+}
+
+/* chamada de anuncios */
+.container-chamada{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.container-chamada h3{
+    margin: 15px;
+    color: #132235;
+    font-size: xx-large;
+}
+
+/* galeria de anuncios */
+.search-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-results-container h3{
+    align-self: flex-end;
+}
+
+.results-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 95vw;
+}
+
+/* card de imoveis */
+.results-card {
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    min-width: 220px;
+    height: 275px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    margin: 3vh 1vw;
+    background-color: white;
+}
+
+#chamada-republica .results-card {
+    border: black;
+}
+
+/* animação sombra hover */
+.results-card:hover{
+    box-shadow: 0 4px  4px rgba(206, 206, 206, 0.575);
+}
+
+.results-card img {
+    height: 150px;
+    align-self: center;
+    object-fit: contain;
+    
+}
+
+/* inicio textos do card */
+.results-card-text {
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    padding: 0 15px;
+}
+
+.realty-type {
+    font-size: 0.75rem;
+    font-weight: 550;
+    color:rgb(75, 75, 75);
+    margin: 10px 0 15px 0;
+}
+
+.realty-street {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.realty-adress {
+    font-weight: 600;
+    font-size: 0.82rem;
+    color:rgb(75, 75, 75);
+}
+
+.realty-price {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    color:rgb(50, 50, 50);
+}
+/* fim textos do card */
+
+/*estilização do botão de ver tudo*/
+#vertudo-rep-button{
+    font-size: 15px;
+    border-radius: 100px 25px;
+    padding: 10px;
+    border: 0;
+    background-color: #6DDAD3;
+    color: #132235;
+    transition: all 0.5s ease;
+    width: 180px;
+    margin: 5px;
+}
+
+#vertudo-rep-button:hover{
+    background-color: #c8fdfa;
+    border-radius: 25px 100px;
+}
+
+#vertudo-button{
+    font-size: 15px;
+    border-radius: 100px 25px;
+    padding: 10px;
+    border: 0;
+    background-color: #6DDAD3;
+    color: #132235;
+    transition: all 0.5s ease;
+    width: 180px;
+    margin: 5px;
+}
+
+#vertudo-button:hover{
+    background-color: #132235;
+    color: whitesmoke;
+    border-radius: 25px 100px;
+}
+
+/* SECTION 3 */
+#section3{
+    margin-top: 5vh;
+    padding-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#section3 h2{
+    margin-bottom: 5vh;
+}
+
+.cards-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    max-width: 1000px;
+}
+
+.details-card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    min-width: 220px;
+    height: 270px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.details-card p{
+    max-width: 90%;
+    margin: 3%;
+}
+
+.details-card img{
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 4%;
+    margin-right: 4%;
+}
+
+.details-card ul{
+    list-style-type: none;
+}
+
+/* footer */
+footer{
+    background-color: #132235;
+    color: white;
+}
+
+/* footer section 1 */
+#institucional {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    border-bottom: solid 1px white;
+}
+
+#institucional img{
+    height: 70px;
+}
+
+.link-list ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 150px;
+}
+
+.link-list a{
+    text-decoration: none;
+    color: #6DDAD3;
+}
+
+
+/* footer section 2 */
+#cr-social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: small;
+    padding: 30px;
+}
+
+#social img{
+    height: 20px;
+    margin: 0 5px
+}
+
+#social{
+    margin-right: 235px;
+}
+
+
+
+
+/* INICIO RESPONSIVIDADE */
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+    /* HEADER */
+    header{
+        flex-direction: column;
+    }
+    .buttons-header{
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    
+    }
+    #anuncie-button{
+        width: 10em;
+        height: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+    }
+
+    #container-reg-log{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    #reg-button{
+        width: 10em;
+        border-radius: 50px;
+        border-right: 0;
+        height: 2em
+    }
+    #log-button{
+        width: 10em;
+        border-radius: 50px;
+        border-left: 0;
+        height: 2em;
+    }
+
+    /* SECTION 1 */
+    #section-1{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-flutuante{
+        font-size: medium;
+    }
+    #buscar-button{
+        border-radius: 50px;
+    }
+
+
+
+    /* SECTION 2 */
+    .results-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .results-card{
+        scale: 110%;
+        margin: 3vh;
+    }
+    .hidden-mobile{
+        display: none;
+    }
+
+    /* SECTION 3 */
+
+    .cards-row {
+        flex-direction: column;
+    }
+
+
+    /* FOOTER */
+    #institucional{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .link-list ul{
+        text-align: center;
+        margin: 5px;
+    }
+
+    #cr-social{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #social{
+        margin: 15px;
+        padding: 0;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    /* HEADER */
+.buttons-header{
+    justify-content: space-around;
+}
+#anuncie-button{
+    width: 30%
+}
+#container-reg-log{
+    width: 60%;
+}
+    /* SECTION 1 */
+#section-1{
+    display: flex;
+    flex-direction: column;
+}
+  
+    
+    /* SECTION 2 */
+    .results-row{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .results-card{
+        scale: 110%;
+        margin: 3vh;
+    }
+
+    /* SECTION 3 */
+    .cards-row {
+        flex-direction: column;
+    }
+
+    .details-card {
+        flex-direction: row;
+        align-items: center;
+        width: 95%;
+        height: fit-content;
+    }
+
+        /* FOOTER */
+
+    .link-list ul{
+        text-align: center;
+        margin: 0;
+    }
+
+    #cr-social{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #social{
+        margin: 15px;
+        padding: 0;
+    }
+}
